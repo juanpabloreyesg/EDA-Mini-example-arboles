@@ -36,3 +36,17 @@ class arbol_nario:
         else:
             for hijo in self.hijos:
                 hijo.agregar_elemento(padre, elemento)
+
+
+
+
+@dataclass(repr=True)
+class arbol_rojonegro:    
+
+    elemento: int = None
+
+    hijo_izquierdo: List['arbol_rojonegro']= None
+    hijo_derecho: List['arbol_rojonegro']= None
+    rojo: bool = True
+
+    
